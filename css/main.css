@@ -29,3 +29,8 @@
 .account-link:hover {
     background: #3d68ff;
 }
+
+.logo {
+    width: 42px;
+    display: inline-block;
+}

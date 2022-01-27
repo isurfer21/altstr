@@ -20,3 +20,33 @@ class ConvertCase {
         return output;
     }
 }
+
+class FilterData {
+    static get Separators() {
+        return {
+            newline: "\n",
+            carriagereturn: "\r",
+            tab: "\t",
+            comma: ",",
+            semicolon: ";",
+            colon: ":",
+            pipe: "|",
+            space: " "
+        };
+    }
+    static do(type, text, separator) {
+        let output = '',
+            list = text.split(FilterData.Separators[separator]);
+        switch (type) {
+            case 'unique':
+                let uniqueList = [...new Set(list)];
+                output = uniqueList.join('\n');
+                break;
+            case 'duplicate':
+                let duplicateList = list.filter((item, index) => list.indexOf(item) !== index);
+                output = duplicateList.join('\n');
+                break;
+        }
+        return output;
+    }
+}
