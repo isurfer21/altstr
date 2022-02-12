@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <!-- Change Case -->
-                <div x-show="sidebarActiveItem == sidebarMenu[1]" class="flex flex-wrap" x-data="{ convertedText: '' }">
+                <div x-show="sidebarActiveItem == sidebarMenu[1]" class="flex flex-wrap" x-data="{ convertedText: ' ' }">
                     <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
                         <div class="leading-loose">
                             <div class="p-6 bg-white rounded shadow-md">
@@ -91,13 +91,13 @@
                         <div class="leading-loose">
                             <div class="p-6 bg-white rounded shadow-md">
                                 <h3 class="text-xl pb-1 border-b mb-4 border-solid flex items-center">Output</h3>
-                                <pre><code class="mt-0" x-text="convertedText"></code></pre>
+                                <pre class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded"><code class="mt-0 text-sm font-sans" x-text="convertedText"></code></pre>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Filter Data -->
-                <div x-show="sidebarActiveItem == sidebarMenu[2]" class="flex flex-wrap" x-data="{ filteredText: '' }">
+                <div x-show="sidebarActiveItem == sidebarMenu[2]" class="flex flex-wrap" x-data="{ filteredText: ' ' }">
                     <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
                         <div class="leading-loose">
                             <div class="p-6 bg-white rounded shadow-md">
@@ -136,7 +136,7 @@
                         <div class="leading-loose">
                             <div class="p-6 bg-white rounded shadow-md">
                                 <h3 class="text-xl pb-1 border-b mb-4 border-solid flex items-center">Output</h3>
-                                <pre><code class="mt-0" x-text="filteredText"></code></pre>
+                                <pre class="w-full px-5 py-2 text-gray-700 bg-gray-200 rounded"><code class="mt-0 text-sm font-sans" x-text="filteredText"></code></pre>
                             </div>
                         </div>
                     </div>

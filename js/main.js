@@ -10,11 +10,15 @@ class ConvertCase {
                 break;
             case 'capitalize':
                 text = text.toLowerCase();
-                let words = text.split(' ');
-                for (let i = 0; i < words.length; i++) {
-                    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+                let lines = text.split('\n');
+                for (let i = 0; i < lines.length; i++) {
+                    let words = lines[i].split(' ');
+                    for (let j = 0; j < words.length; j++) {
+                        words[j] = words[j].charAt(0).toUpperCase() + words[j].slice(1);
+                    }
+                    lines[i] = words.join(' ');
                 }
-                output = words.join(' ');
+                output = lines.join('\n');
                 break;
         }
         return output;
